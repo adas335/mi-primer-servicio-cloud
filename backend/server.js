@@ -16,11 +16,12 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/estado", (req, res) => {
+// Reto 3: Endpoint exacto requerido
+app.get("/api/estado", (req, res) => {
   res.json({
-    servidor: "Cloud Server",
-    estado: "Funcionando",
-    usuarios: 1,
+    estado: "Online",
+    servidor: "Node.js",
+    servicio: "Cloud API",
     version: "1.0"
   });
 });
