@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     // 1. Obtener los productos
-    fetch("http://localhost:3000/api/productos")
+    fetch("https://backend-cloud-br1r.onrender.com/api/productos")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error en el servidor");
@@ -30,7 +30,7 @@ function App() {
       });
 
     // 2. Reto 3: Consumir el endpoint /api/estado
-    fetch("http://localhost:3000/api/estado")
+    fetch("https://backend-cloud-br1r.onrender.com/api/estado")
       .then((response) => response.json())
       .then((data) => setEstadoServidor(data))
       .catch((error) => console.error("Error al obtener estado:", error));
